@@ -1,78 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ramesh Kumar Automations</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-.wa-btn {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramesh Kumar Automations</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .shadow-card {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-slate-800">
+<body class="bg-gray-50">
 
-<!-- HEADER -->
-<header class="bg-white shadow-sm sticky top-0 z-40">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- HEADER / NAV -->
+  <header class="bg-white shadow-md p-4 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-400 p-2 rounded-xl text-white font-bold flex items-center justify-center">RK</div>
+      <img src="Assets/ramesh.jpg" alt="Ramesh Kumar Photo" class="w-12 h-12 rounded-full object-cover border">
       <div>
-        <h1 class="text-lg font-semibold">Ramesh Kumar Automations</h1>
-        <p class="text-xs text-slate-500">AI • Automation • Branding</p>
+        <h1 class="text-xl font-bold">Ramesh Kumar<br>Automations</h1>
+        <p class="text-sm text-gray-500">AI • Automation • Branding</p>
       </div>
     </div>
 
-    <nav class="hidden md:flex gap-6 text-sm">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <a href="https://wa.me/919810156827" class="bg-green-500 text-white px-4 py-2 rounded-lg shadow">
+      WhatsApp
+    </a>
+  </header>
 
-    <a href="https://wa.me/919810156827" class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">WhatsApp</a>
-  </div>
-</header>
+  <!-- HERO SECTION -->
+  <section class="p-6 text-center">
+    <h2 class="text-2xl font-semibold leading-relaxed">
+      Automations, CRM, WhatsApp flows,<br>AI agents & premium branding.
+    </h2>
 
-<!-- HERO SECTION -->
-<main class="max-w-7xl mx-auto px-6 py-10">
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="https://cal.com" target="_blank"
+         class="bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-card">
+        Book a Call
+      </a>
 
-  <h2 class="text-4xl font-extrabold leading-tight mt-6">
-    Automations, CRM, WhatsApp flows, AI agents, branding.
-  </h2>
+      <a href="portfolio.html"
+         class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-xl shadow-card">
+        Portfolio
+      </a>
+    </div>
+  </section>
 
-  <div class="mt-8 flex gap-4">
-    <a href="contact.html" class="bg-indigo-600 text-white px-6 py-3 rounded-md text-lg">Book a Call</a>
-    <a href="portfolio.html" class="border border-slate-300 px-6 py-3 rounded-md text-lg">Portfolio</a>
-  </div>
+  <!-- WHAT I DO -->
+  <section class="p-6">
+    <div class="bg-white p-6 rounded-xl shadow-card">
+      <h3 class="text-xl font-semibold mb-4">What I Do</h3>
 
-  <!-- WHAT I DO CARD -->
-  <div class="bg-white p-8 rounded-xl shadow-md mt-10">
-    <h3 class="font-semibold text-xl mb-4">What I Do</h3>
-    <ul class="space-y-2 text-slate-700 text-lg">
-      <li>✔ LinkedIn Branding</li>
-      <li>✔ CRM Setup</li>
-      <li>✔ WhatsApp Automation</li>
-      <li>✔ AI Agents</li>
-    </ul>
-  </div>
-</main>
+      <ul class="space-y-2 text-gray-700">
+        <li>✔ LinkedIn Branding</li>
+        <li>✔ CRM Setup</li>
+        <li>✔ WhatsApp Automation</li>
+        <li>✔ AI Agents</li>
+        <li>✔ AI Chatbots</li>
+        <li>✔ End-to-End Automation</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-6 text-center text-sm mt-10">
-  © 2025 Ramesh Kumar Automations • +91 9810156827
-</footer>
+  <!-- DOWNLOAD KITS -->
+  <section class="p-6">
+    <h3 class="text-xl font-semibold mb-4">Downloads</h3>
 
-<!-- Floating WhatsApp -->
-<a class="wa-btn" href="https://wa.me/919810156827">
-  <div class="bg-green-500 text-white p-4 rounded-full shadow-lg font-semibold">WA</div>
-</a>
+    <div class="space-y-3">
 
-</body>
-</html>
+      <a href="Onboarding_Kit.pdf" class="block bg-white p-4 rounded-xl shadow-card">
+        <strong>Onboarding Kit</strong><br>
+        <span class="text-indigo-600">Download</span>
+      </a>
+
+      <a href="Premium_Booklet.pdf" class="block bg-white p-4 rounded-xl shadow-card">
+        <strong>Premium Booklet</strong><br>
+        <span class="text-indigo-600">Download</span>
+      </a>
+
+      <a href="Proposal.pdf" class="block bg-white p-4 rounded-xl shadow-card">
+        <strong>Proposal</strong><br>
+        <span class="text-indigo-600">Download</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center p-4 mt
