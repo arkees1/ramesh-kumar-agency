@@ -1,5 +1,5 @@
-# ramesh-kumar-agency
-Ramesh Kumar - AI Automation Website
+# Ramesh Kumar – AI & Automation Agency Website
+
 This package contains:
 - A static **index.html** (no React required)
 - Tailwind via CDN
