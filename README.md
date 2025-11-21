@@ -1,2 +1,1 @@
-# Full Multi-Page Website
-Upload all files to GitHub.
+Ramesh Kumar Automations — Full Iconic Deep Space Website. Upload these files to repo root. Ensure folder 'assets' contains ramesh.jpg and PDFs are uploaded to repo root.

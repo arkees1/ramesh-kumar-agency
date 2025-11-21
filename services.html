@@ -1,40 +1,75 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ramesh Kumar Automations</title>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Ramesh Kumar Automations</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-.wa-btn{position:fixed;right:20px;bottom:20px;z-index:9999;}
-.fade-in{animation:fadeIn .6s ease both;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+:root{--grad1:#031040;--grad2:#2b076e;--accent:#7c5ce7;}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--grad1),#06021a); color:#e6eefc;}
+.container{max-width:1100px;margin:0 auto;padding:1.25rem;}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);border-radius:12px;padding:1rem;}
+a{color:var(--accent);text-decoration:none;}
+.fade{animation:fadeUp .6s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.nav-link{padding:0.4rem 0.6rem;border-radius:8px;}
+.nav-link:hover{background:linear-gradient(90deg, rgba(124,92,231,0.08), rgba(43,7,110,0.06));}
+.footer{background:linear-gradient(90deg, rgba(5,6,26,0.6), rgba(4,2,20,0.8));padding:2rem;border-top:1px solid rgba(255,255,255,0.03);color:#bfcffb}
+.cta-bar{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:8px}
+.avatar{width:180px;height:180px;border-radius:18px;object-fit:cover;border:4px solid rgba(255,255,255,0.06)}
+@media (max-width:768px){.grid-2{display:block} .avatar{width:96px;height:96px;border-radius:9999px} .container{padding:0.75rem}}
 </style>
-</head><body class="bg-gray-50 text-slate-800">
-<header class="bg-white shadow-sm sticky top-0 z-40">
-<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-400 p-2 rounded-xl text-white font-bold flex items-center justify-center">RK</div>
-<div><h1 class="text-lg font-semibold">Ramesh Kumar Automations</h1>
-<p class="text-xs text-slate-500">AI • Automation • Branding</p></div></div>
-<nav class="hidden md:flex gap-6 text-sm">
-<a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
-</nav>
-<a href="https://wa.me/919810156827" class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">WhatsApp</a>
-</div></header><main class="max-w-7xl mx-auto px-6 py-10">
-
-<h1 class="text-4xl font-bold mb-6">Services</h1>
-<div class="grid md:grid-cols-2 gap-6">
-<div class="p-6 bg-white shadow rounded-xl"><h3>AI Automation</h3></div>
-<div class="p-6 bg-white shadow rounded-xl"><h3>WhatsApp Flows</h3></div>
-<div class="p-6 bg-white shadow rounded-xl"><h3>CRM Dashboards</h3></div>
-<div class="p-6 bg-white shadow rounded-xl"><h3>AI Agents</h3></div>
-</div>
+</head>
+<body>
+<header class="container" style="display:flex;align-items:center;justify-content:space-between;margin-top:18px">
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--grad2),var(--grad1));display:flex;align-items:center;justify-content:center;font-weight:700">RK</div>
+    <div>
+      <div style="font-weight:700;font-size:18px">Ramesh Kumar Automations</div>
+      <div style="font-size:12px;color:#a8b7e6">AI • Automation • Branding</div>
+    </div>
+  </div>
+  <nav style="display:flex;gap:8px;align-items:center">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="portfolio.html">Portfolio</a>
+    <a class="nav-link" href="pricing.html">Pricing</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a style="background:linear-gradient(90deg,var(--grad2),var(--grad1));padding:8px 12px;border-radius:8px;color:white" href="https://wa.me/919810156827">WhatsApp</a>
+  </nav>
+</header>
+<main class="container" style="margin-top:28px">
+<section class="fade">
+  <h1 style="font-size:28px">Services — What I build</h1>
+  <p style="color:#b9c8ff;margin-top:8px">End-to-end automation, AI agents, WhatsApp flows, and branding.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px">
+    <div class="card"><strong>AI Automation</strong><div style="margin-top:6px;color:#9fb0f3">Forms→CRM→WhatsApp→Email→Reports</div></div>
+    <div class="card"><strong>WhatsApp Systems</strong><div style="margin-top:6px;color:#9fb0f3">Interactive menus, templates, reminders</div></div>
+    <div class="card"><strong>AI Agents</strong><div style="margin-top:6px;color:#9fb0f3">Responder, lead qualifier, auto-drafts</div></div>
+    <div class="card"><strong>CRM & Dashboards</strong><div style="margin-top:6px;color:#9fb0f3">Airtable, HubSpot, reports</div></div>
+    <div class="card"><strong>Branding</strong><div style="margin-top:6px;color:#9fb0f3">LinkedIn, pitch visuals, portfolio</div></div>
+    <div class="card"><strong>Custom Integrations</strong><div style="margin-top:6px;color:#9fb0f3">APIs, Zapier, Make/Integromat</div></div>
+  </div>
+</section>
 
 </main>
-<footer class="bg-gray-900 text-white py-6 mt-12 text-center text-sm">
-© 2025 Ramesh Kumar Automations • +91 9810156827
+<footer class="footer">
+  <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="min-width:220px">
+      <div style="font-weight:700">Ramesh Kumar Automations</div>
+      <div style="margin-top:8px;color:#9fb0f3;font-size:13px">AI • Automation • Branding</div>
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div style="font-size:13px;color:#a8b7e6">+91 9810156827</div>
+      <a href="https://wa.me/919810156827" style="background:linear-gradient(90deg,var(--grad2),var(--grad1));padding:10px 14px;border-radius:10px;color:white">Message</a>
+    </div>
+  </div>
 </footer>
-
-<a class="wa-btn fade-in" href="https://wa.me/919810156827">
-<div class="bg-green-500 text-white p-4 rounded-full shadow-lg">WA</div></a>
-
-</body></html>
+<div class="cta-bar">
+  <a href="https://wa.me/919810156827" style="background:linear-gradient(90deg,var(--grad2),var(--grad1));padding:12px;border-radius:12px;color:white;display:inline-block">WhatsApp</a>
+  <a href="contact.html" style="background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;color:#cfd9ff;display:inline-block">Book a Call</a>
+</div>
+</body>
+</html>
