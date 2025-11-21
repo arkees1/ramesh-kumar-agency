@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Ramesh Kumar Automations</title>
+<meta name="description" content="Contact form and booking for Ramesh Kumar Automations" />
+<link rel="icon" href="assets/favicon.ico" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<!-- Google Analytics 4 (replace G-XXXXXXXXXX with your GA4 ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Ramesh Kumar Automations",
+  "url":"https://arkees1.github.io/ramesh-kumar-agency/",
+  "logo":"https://arkees1.github.io/ramesh-kumar-agency/assets/ramesh.jpg",
+  "sameAs":["https://www.linkedin.com/in/arkees1"],
+  "telephone":"+919810156827",
+  "email":"arkees@gmail.com",
+  "description":"AI automations, WhatsApp systems, CRM integrations and premium agency deliverables."
+}
+</script>
+
+</head>
+<body>
+
+<header class="container header fade-up">
+  <div class="brand"><div class="logo">RK</div><div style="margin-left:8px">Ramesh Kumar</div></div>
+  <nav class="nav">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta track-whatsapp" href="https://wa.me/918010156827">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section style="text-align:center;margin-top:12px" class="fade-up">
+    <h2>Contact</h2>
+    <p class="small">Tell me about your project — or book a call. I reply within 24 hours.</p>
+  </section>
+
+  <form id="contact-form" action="https://formspree.io/f/mzzonljp" method="POST" class="fade-up" style="margin-top:18px;max-width:720px;margin-left:auto;margin-right:auto">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <input type="text" name="phone" placeholder="Phone (optional)">
+    <textarea name="message" rows="6" placeholder="Tell me about the project" required></textarea>
+    <div style="display:flex;gap:12px">
+      <button type="submit" class="btn btn-primary track-cta">Send message</button>
+      <a href="https://wa.me/918010156827" class="btn btn-ghost track-whatsapp">Message on WhatsApp</a>
+    </div>
+  </form>
+</main>
+
+<div id="success" class="success-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;z-index:9999">
+  <div style="background:rgba(11,11,20,0.95);padding:26px;border-radius:12px;max-width:420px;text-align:center;border:1px solid rgba(255,255,255,0.04)">
+    <h3>Thanks — message sent ✅</h3>
+    <p class="small">I have received your message and will reply within 24 hours.</p>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
+      <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+      <button class="btn btn-ghost" onclick="document.getElementById('success').style.display='none'">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer class="container footer fade-up">
+  <div style="display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center">
+    <div><strong>Ramesh Kumar Automations</strong><div style="color:var(--muted)">AI • Automation • Branding</div></div>
+    <div style="text-align:right"><a href="mailto:arkees@gmail.com" style="color:var(--muted)">arkees@gmail.com</a><br><a class='track-whatsapp' href='https://wa.me/918010156827' style='color:var(--wa)'>+91 9810156827</a></div>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById('contact-form');
+const success = document.getElementById('success');
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const data = new FormData(form);
+  try{
+    const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+    if(res.ok){ form.reset(); success.style.display='flex'; sendEvent('form_submit'); }
+    else { alert('Submission failed — please try again.'); }
+  }catch(err){ alert('Network error — please try again.'); }
+});
+function sendEvent(n){ try{ if(window.gtag) gtag('event', n); }catch(e){} }
+</script>
+
+</body>
+</html>
